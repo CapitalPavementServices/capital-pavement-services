@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 76" width="310" height="76"
+     role="img" aria-label="Capital Pavement Services logo">
+  <title>Capital Pavement Services — Northern Virginia</title>
+
+  <defs>
+
+    <!-- ── Clip stripe + details to shield silhouette ── -->
+    <clipPath id="cps-clip">
+      <path d="M15 3 L59 3 Q68 3 68 12 L68 47 Q68 63 37 72 Q6 63 6 47 L6 12 Q6 3 15 3 Z"/>
+    </clipPath>
+
+    <!-- ── Yellow stripe: bright top, deeper amber base ── -->
+    <linearGradient id="cps-stripe" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fcc040"/>
+      <stop offset="45%"  stop-color="#e8a020"/>
+      <stop offset="100%" stop-color="#b87010"/>
+    </linearGradient>
+
+    <!-- ── Shield body: dark charcoal, radial top-light for depth ── -->
+    <radialGradient id="cps-shield-bg" cx="46%" cy="26%" r="68%" fx="46%" fy="26%">
+      <stop offset="0%"   stop-color="#2e2e3c"/>
+      <stop offset="55%"  stop-color="#1a1a24"/>
+      <stop offset="100%" stop-color="#0c0c12"/>
+    </radialGradient>
+
+    <!-- ── Gold ambient glow behind shield ── -->
+    <filter id="cps-glow" x="-22%" y="-22%" width="144%" height="144%"
+            color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
+      <feFlood flood-color="#e8a020" flood-opacity="0.28" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+
+  <!-- ══════════════════════════════════
+       SHIELD ICON
+  ══════════════════════════════════ -->
+
+  <!-- Outermost gold accent ring (halo border) -->
+  <path d="M14 1 L60 1 Q70 1 70 11 L70 48 Q70 65 37 75 Q4 65 4 48 L4 11 Q4 1 14 1 Z"
+        fill="none"
+        stroke="#e8a020"
+        stroke-width="1.4"
+        opacity="0.5"/>
+
+  <!-- Shield body — dark charcoal with radial depth + gold glow -->
+  <path d="M15 3 L59 3 Q68 3 68 12 L68 47 Q68 63 37 72 Q6 63 6 47 L6 12 Q6 3 15 3 Z"
+        fill="url(#cps-shield-bg)"
+        filter="url(#cps-glow)"/>
+
+  <!-- ── Contents clipped to shield shape ── -->
+  <g clip-path="url(#cps-clip)">
+
+    <!-- Yellow diagonal parking stripe -->
+    <rect x="25" y="-10" width="24" height="96"
+          fill="url(#cps-stripe)"
+          transform="rotate(-13, 37, 37)"/>
+
+    <!-- Specular highlight — bright left edge of stripe -->
+    <rect x="25" y="-10" width="4" height="96"
+          fill="rgba(255,252,215,0.32)"
+          transform="rotate(-13, 37, 37)"/>
+
+    <!-- Shadow — dark right edge of stripe (depth) -->
+    <rect x="45" y="-10" width="4" height="96"
+          fill="rgba(0,0,0,0.22)"
+          transform="rotate(-13, 37, 37)"/>
+
+    <!-- Pavement surface texture: faint dashed lane lines at bottom -->
+    <line x1="6"  y1="56" x2="68" y2="56"
+          stroke="rgba(255,255,255,0.11)"
+          stroke-width="0.85"
+          stroke-dasharray="4,3"/>
+    <line x1="6"  y1="61" x2="68" y2="61"
+          stroke="rgba(255,255,255,0.055)"
+          stroke-width="0.7"
+          stroke-dasharray="4,3"/>
+
+  </g>
+
+  <!-- Inner rim — thin white edge highlight on shield -->
+  <path d="M15 3 L59 3 Q68 3 68 12 L68 47 Q68 63 37 72 Q6 63 6 47 L6 12 Q6 3 15 3 Z"
+        fill="none"
+        stroke="rgba(255,255,255,0.1)"
+        stroke-width="1"/>
+
+
+  <!-- ══════════════════════════════════
+       LOGOTYPE
+  ══════════════════════════════════ -->
+
+  <!-- ── CAPITAL PAVEMENT — primary wordmark ── -->
+  <text x="83" y="27"
+        font-family="'Arial Black','Franklin Gothic Heavy','Impact',Arial,sans-serif"
+        font-size="19"
+        font-weight="900"
+        fill="#f0f0f4"
+        letter-spacing="0.35">CAPITAL PAVEMENT</text>
+
+  <!-- Gold rule separating name from subtitle -->
+  <rect x="83" y="33" width="218" height="0.8" fill="#e8a020" opacity="0.38"/>
+
+  <!-- ── SERVICES — gold accent subtitle ── -->
+  <text x="84" y="48"
+        font-family="Arial,'Helvetica Neue',Helvetica,sans-serif"
+        font-size="11"
+        font-weight="700"
+        fill="#e8a020"
+        letter-spacing="5.0">SERVICES</text>
+
+  <!-- ── NORTHERN VIRGINIA — location tagline ── -->
+  <text x="84" y="63"
+        font-family="Arial,'Helvetica Neue',Helvetica,sans-serif"
+        font-size="8"
+        font-weight="400"
+        fill="#5c5c70"
+        letter-spacing="2.8">NORTHERN VIRGINIA</text>
+
+</svg>
