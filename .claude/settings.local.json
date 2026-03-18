@@ -103,7 +103,14 @@
       "Bash(curl -sL --ssl-no-revoke -A Mozilla/5.0 -H 'Accept: application/json' \"https://unsplash.com/napi/search/photos?query=parking+bollards+commercial+new&per_page=6\")",
       "Bash(grep -l \"logo.svg\" /c/Users/dougp/capital-pavement-services/*.html)",
       "Bash(grep -rn \"services.html#\" /c/Users/dougp/capital-pavement-services/*.html)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(for f:*)",
+      "Bash(do)",
+      "Bash(sed -i 's|<p>Serving Northern Virginia &mdash; Fairfax, Arlington, Loudoun &amp; Prince William Counties</p>|<p class=\"\"footer-seo-text\"\">Serving Northern Virginia including: Ashburn, Leesburg, Sterling, Fairfax, Reston, Herndon, Chantilly, Arlington, Alexandria, McLean, Vienna, Springfield, Burke, Woodbridge, Aldie, and Gainesville.</p>|g' \"$f\")",
+      "Bash(done)",
+      "Bash(sed -i 's|<p>Serving Northern Virginia — Fairfax, Arlington, Loudoun &amp; Prince William Counties</p>|<p class=\"\"footer-seo-text\"\">Serving Northern Virginia including: Ashburn, Leesburg, Sterling, Fairfax, Reston, Herndon, Chantilly, Arlington, Alexandria, McLean, Vienna, Springfield, Burke, Woodbridge, Aldie, and Gainesville.</p>|g' about.html contact.html)",
+      "Bash(sed -i 's|<p>Serving Northern Virginia</p>|<p class=\"\"footer-seo-text\"\">Serving Northern Virginia including: Ashburn, Leesburg, Sterling, Fairfax, Reston, Herndon, Chantilly, Arlington, Alexandria, McLean, Vienna, Springfield, Burke, Woodbridge, Aldie, and Gainesville.</p>|g' contact-success.html)",
+      "Bash(cd:*)"
     ]
   }
 }
