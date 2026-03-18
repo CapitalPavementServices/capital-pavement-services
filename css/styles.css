@@ -1718,6 +1718,382 @@ a.service-full-card:hover .service-card-cta {
 }
 
 /* ============================================
+   Trust Badges (Hero)
+   ============================================ */
+
+.hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(232, 160, 32, 0.08);
+  border: 1px solid rgba(232, 160, 32, 0.2);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* ============================================
+   Featured Services (Homepage Top 3)
+   ============================================ */
+
+.featured-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.featured-service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left;
+}
+
+.featured-service-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-light);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.featured-service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.featured-service-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.featured-service-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.featured-service-card h3 a:hover {
+  color: var(--accent);
+}
+
+.featured-service-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.featured-service-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+}
+
+.featured-service-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.services-secondary-grid {
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+
+/* ============================================
+   Who We Serve
+   ============================================ */
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.client-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  transition: all 0.25s ease;
+}
+
+.client-card:hover {
+  border-color: rgba(232, 160, 32, 0.3);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.client-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+  display: block;
+  line-height: 1;
+}
+
+.client-card h3 {
+  font-size: 1.0625rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.client-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================
+   Before / After Section
+   ============================================ */
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.before-after-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.before-after-card:hover {
+  border-color: var(--border-light);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.before-after-label {
+  font-size: 1rem;
+  color: var(--text-primary);
+  padding: 16px 20px 12px;
+  margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.before-after-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.ba-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.ba-image-wrap img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.before-after-card:hover .ba-image-wrap img {
+  transform: scale(1.04);
+}
+
+.ba-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+.ba-tag-after {
+  background: rgba(232, 160, 32, 0.85);
+  color: #0e0e11;
+}
+
+/* ============================================
+   Reviews / Testimonials
+   ============================================ */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.25s ease;
+}
+
+.review-card:hover {
+  border-color: rgba(232, 160, 32, 0.25);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.review-stars {
+  display: flex;
+  gap: 2px;
+  font-size: 1.125rem;
+  color: #f9c22e;
+}
+
+.review-text {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  flex: 1;
+  margin: 0;
+  font-style: italic;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.review-author-info strong {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.review-author-info span {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.review-google-badge {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================================
+   Responsive — new sections
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .featured-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .client-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .before-after-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-trust {
+    margin-top: 36px;
+    padding-top: 28px;
+    gap: 10px;
+  }
+
+  .trust-badge {
+    font-size: 0.825rem;
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .before-after-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================
    FAQ Section
    ============================================ */
 
