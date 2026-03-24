@@ -1728,28 +1728,6 @@ a.service-full-card:hover .service-card-cta {
   margin-bottom: 14px;
 }
 
-/* ============================================
-   Client Grid — 5 items
-   Uses a 6-col subgrid so two bottom items center naturally
-   ============================================ */
-
-.client-grid-5 {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.client-grid-5 .client-card {
-  grid-column: span 2;
-}
-
-/* Center the bottom 2 cards: shift them into col 2-4 and 4-6 */
-.client-grid-5 .client-card:nth-child(4) {
-  grid-column: 2 / 4;
-}
-
-.client-grid-5 .client-card:nth-child(5) {
-  grid-column: 4 / 6;
-}
 
 /* ============================================
    How It Works — Process Steps
@@ -1844,31 +1822,11 @@ a.service-full-card:hover .service-card-cta {
     display: none;
   }
 
-  .client-grid-5 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .client-grid-5 .client-card {
-    grid-column: span 1;
-  }
-
-  .client-grid-5 .client-card:nth-child(4),
-  .client-grid-5 .client-card:nth-child(5) {
-    grid-column: span 1;
-  }
 }
 
 @media (max-width: 480px) {
   .process-grid {
     grid-template-columns: 1fr;
-  }
-
-  .client-grid-5 {
-    grid-template-columns: 1fr;
-  }
-
-  .client-grid-5 .client-card {
-    grid-column: span 1;
   }
 }
 
