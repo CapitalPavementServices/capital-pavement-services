@@ -110,7 +110,10 @@
       "Bash(done)",
       "Bash(sed -i 's|<p>Serving Northern Virginia — Fairfax, Arlington, Loudoun &amp; Prince William Counties</p>|<p class=\"\"footer-seo-text\"\">Serving Northern Virginia including: Ashburn, Leesburg, Sterling, Fairfax, Reston, Herndon, Chantilly, Arlington, Alexandria, McLean, Vienna, Springfield, Burke, Woodbridge, Aldie, and Gainesville.</p>|g' about.html contact.html)",
       "Bash(sed -i 's|<p>Serving Northern Virginia</p>|<p class=\"\"footer-seo-text\"\">Serving Northern Virginia including: Ashburn, Leesburg, Sterling, Fairfax, Reston, Herndon, Chantilly, Arlington, Alexandria, McLean, Vienna, Springfield, Burke, Woodbridge, Aldie, and Gainesville.</p>|g' contact-success.html)",
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(where node:*)",
+      "Bash(where powershell:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\dougp\\\\capital-pavement-services\\\\remove_photos.ps1\")"
     ]
   }
 }
